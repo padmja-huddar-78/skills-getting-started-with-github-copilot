@@ -144,15 +144,32 @@ section h3 {
   gap: 10px;
   padding: 6px 0;
   color: #0b1220;
+  justify-content: flex-start;
 }
 
 .participants-list li::before {
-  content: "";
-  width: 8px;
-  height: 8px;
-  background: #2563eb;
-  border-radius: 50%;
-  flex: 0 0 8px;
+  display: none;
+}
+
+.participant-email {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+}
+
+.unregister-btn {
+  background: transparent;
+  border: none;
+  color: #c62828;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 4px 6px;
+  border-radius: 4px;
+}
+
+.unregister-btn:hover {
+  background: rgba(198, 40, 40, 0.08);
 }
 
 .no-participants {
@@ -230,11 +247,7 @@ footer {
   color: #666;
 }
 
-/* Grid for larger screens */
-@media (min-width: 680px) {
-  #activities-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-  }
+/* Single-column layout enforced: two-column layout removed */
+#activities-list {
+  display: block;
 }
