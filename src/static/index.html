@@ -5,6 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mergington High School Activities</title>
     <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Activity card styling */
+      .activity-card {
+        border: 1px solid #e6e9ee;
+        border-radius: 10px;
+        padding: 12px;
+        background: linear-gradient(180deg, #ffffff, #fbfcfe);
+        box-shadow: 0 4px 10px rgba(16, 24, 40, 0.04);
+      }
+      .activity-card h4 {
+        margin: 0 0 6px;
+        font-size: 1.05rem;
+      }
+      .activity-card p {
+        margin: 6px 0;
+        color: #333;
+      }
+
+      /* Participants section */
+      .participants-section {
+        margin-top: 10px;
+      }
+      .participants-section strong {
+        display: block;
+        margin-bottom: 6px;
+        font-weight: 600;
+      }
+      .participants-list {
+        margin: 0 0 0 18px;
+        padding: 0;
+        color: #222;
+      }
+      .participants-list li {
+        margin: 4px 0;
+        line-height: 1.3;
+      }
+      .no-participants {
+        color: #667085;
+        font-style: italic;
+        margin: 0;
+      }
+
+      /* Grid for larger screens */
+      @media (min-width: 680px) {
+        #activities-list {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 12px;
+        }
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -26,7 +77,12 @@
         <form id="signup-form">
           <div class="form-group">
             <label for="email">Student Email:</label>
-            <input type="email" id="email" required placeholder="your-email@mergington.edu" />
+            <input
+              type="email"
+              id="email"
+              required
+              placeholder="your-email@mergington.edu"
+            />
           </div>
           <div class="form-group">
             <label for="activity">Select Activity:</label>
